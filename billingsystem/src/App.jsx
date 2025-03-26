@@ -1,7 +1,9 @@
 import BillingForm from './components/BillingForm'
 
 function App() {
-  return <BillingForm />
+    return <div>
+        <BillingForm/>
+    </div>
 }
 
 export default App
