@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { FaGift } from 'react-icons/fa';
 
 const Header = () => {
   const [cartCount] = useState(0);
@@ -75,27 +77,32 @@ const Header = () => {
 
             {/* Navigation Links */}
             <div className="flex items-center space-x-8 ml-8">
-              <Link to="/ramadan" className="flex items-center text-gray-700 hover:text-[#4B2E83] transition-colors">
+              <Link to="/ramadan" className="flex items-center text-black hover:text-[#1D372E] transition-colors">
                 <span className="mr-1">🌙</span>
-                Ramadan Offers
+                <div className="flex items-center space-x-2 bg-[#5CAF90] text-black text-[13.33px] px-4 py-2 rounded-[24px] hover:bg-[#1D372E] hover:text-black">
+                  <motion.span animate={{ rotate: [-10, 10, -10] }} transition={{ repeat: Infinity, duration: 0.5, ease: "easeInOut" }}>
+                    <FaGift className="text-black" />
+                  </motion.span>
+                  <span className="text-black">Seasonal Offers</span>
+                </div>
               </Link>
-              <Link to="/rush-delivery" className="flex items-center text-gray-700 hover:text-[#4B2E83] transition-colors">
+              <Link to="/rush-delivery" className="flex items-center text-gray-700 hover:text-[#1D372E] transition-colors">
                 <span className="mr-1">🚚</span>
                 Rush delivery
               </Link>
-              <Link to="/sale" className="flex items-center text-gray-700 hover:text-[#4B2E83] transition-colors">
+              <Link to="/sale" className="flex items-center text-gray-700 hover:text-[#1D372E] transition-colors">
                 <span className="mr-1">🏷️</span>
                 On Sale
               </Link>
-              <Link to="/events" className="flex items-center text-gray-700 hover:text-[#4B2E83] transition-colors">
+              <Link to="/events" className="flex items-center text-gray-700 hover:text-[#1D372E] transition-colors">
                 <span className="mr-1">📅</span>
                 Events
               </Link>
-              <Link to="/brands" className="flex items-center text-gray-700 hover:text-[#4B2E83] transition-colors">
+              <Link to="/brands" className="flex items-center text-gray-700 hover:text-[#1D372E] transition-colors">
                 <span className="mr-1">🔗</span>
                 Brands
               </Link>
-              <Link to="/for-you" className="flex items-center text-gray-700 hover:text-[#4B2E83] transition-colors">
+              <Link to="/for-you" className="flex items-center text-gray-700 hover:text-[#1D372E] transition-colors">
                 <span className="mr-1">👤</span>
                 For You
               </Link>

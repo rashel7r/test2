@@ -135,7 +135,7 @@ const Cart = () => {
                     <div className="flex items-center gap-2 mb-6">
                         <h1 className="text-xl">Your
                             Cart: {cartItems.length} item{cartItems.length !== 1 ? 's' : ''}</h1>
-                        <button className="text-[#4B2E83] hover:text-[#3d2569]">
+                        <button className="text-[#5CAF90] hover:text-[#3d2569]">
                             <ShareIcon sx={{fontSize: 20}}/>
                         </button>
                     </div>
@@ -199,13 +199,13 @@ const Cart = () => {
                             </div>
 
                             <Link to="/"
-                                  className="block w-full bg-[#FFD700] text-center py-3 rounded hover:bg-yellow-400 transition-colors mb-4">
+                                  className="block w-full bg-[#1D372E] text-white text-center py-3 rounded hover:bg-yellow-400 transition-colors mb-4">
                                 ← Keep Shopping
                             </Link>
 
                             {cartItems.length > 0 && (
                                 <button
-                                    className="w-full bg-[#4B2E83] text-white text-center py-3 rounded hover:bg-[#3d2569] transition-colors mb-8">
+                                    className="w-full bg-[#5CAF90] text-white text-center py-3 rounded hover:bg-[#3d2569] transition-colors mb-8">
                                     Checkout
                                 </button>
                             )}
@@ -232,7 +232,7 @@ const Cart = () => {
 
                     {/* Related Products Section */}
                     <div className="mt-24">
-                        <h2 className="text-2xl text-[#4B2E83] mb-8">Related Products</h2>
+                        <h2 className="text-2xl text-[#1D372E] mb-8 text-center">Related Products</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                             {relatedProducts.map(product => (
                                 <div
@@ -252,8 +252,8 @@ const Cart = () => {
                                                 }}
                                             />
                                         </div>
-                                        <h3 className="text-lg mb-2 group-hover:text-[#4B2E83]">{product.name}</h3>
-                                        <p className="text-[#4B2E83] font-medium">{product.price}</p>
+                                        <h3 className="text-lg mb-2 group-hover:text-[#1D372E] text-center text-gray-700">{product.name}</h3>
+                                        <p className="text-gray-700 font-medium text-center group-hover:text-[#1D372E]">{product.price}</p>
                                     </Link>
                                 </div>
                             ))}

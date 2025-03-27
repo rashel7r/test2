@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaTwitter,
@@ -130,7 +131,7 @@ const Footer = () => {
 
         {/* New Links Section */}
         <div className="flex flex-wrap justify-center gap-4 text-xs text-gray-400 font-light">
-          <a href="#" className="hover:underline text-xs text-white">Read About TechWave</a>
+          <Link to="/about" className="hover:underline text-xs text-white">Read About TechWave</Link>
           <span className="hidden md:inline">|</span>
           <a href="#" className="hover:underline text-white">Reviews</a>
           <span className="hidden md:inline">|</span>

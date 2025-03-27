@@ -94,14 +94,14 @@ const RushDelivery = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <div className="container mx-auto px-4 py-8 flex-grow">
-        <RushDeliveryBanner />
         <div className="flex gap-8">
           {/* Sidebar */}
           <Sidebar />
           
           {/* Main Content */}
           <div className="flex-1">
-            <h2 className="text-[#4B2E83] text-2xl font-semibold mb-6">SAME DAY DELIVERY BEST SELLERS</h2>
+            <RushDeliveryBanner />
+            <h2 className="text-[#000000] text-2xl font-semibold mb-6">RUSH DELIVERY OFFERS</h2>
             <div className="grid grid-cols-5 gap-x-6 gap-y-8">
               {products.map((product) => (
                 <div 
@@ -117,10 +117,10 @@ const RushDelivery = () => {
                     />
                   </div>
                   <div className="mt-3">
-                    <h3 className="text-gray-700 font-medium line-clamp-2 min-h-[2.5rem]">
+                    <h3 className="text-gray-700 font-medium line-clamp-2 min-h-[2.5rem] text-center group-hover:text-[#1D372E]">
                       {product.name}
                     </h3>
-                    <p className="text-purple-800 font-semibold mt-1">
+                    <p className="text-gray-700 font-semibold text-center group-hover:text-[#1D372E]">
                       {product.price}
                     </p>
                   </div>

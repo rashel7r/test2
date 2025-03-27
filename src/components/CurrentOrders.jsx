@@ -30,15 +30,15 @@ const CurrentOrders = () => {
             <h2 className="text-xl font-medium text-gray-800 mb-5">Current Orders</h2>
             
             {/* Search Bar */}
-            <div className="relative mb-5">
+            <div className="relative mb-5 inline-block">
                 <input
                     type="text"
                     placeholder="SEARCH ORDER"
                     value={searchQuery}
                     onChange={handleSearchChange}
-                    className="w-full pl-4 pr-10 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#4B2E83] focus:border-[#4B2E83]"
+                    className="w-[285px] h-[45px] pl-4 pr-[50px] border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#4B2E83] focus:border-[#4B2E83] text-sm"
                 />
-                <button className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                <button className="absolute right-[3px] top-1/2 -translate-y-1/2 h-[39px] w-[39px] bg-[#4B9B7D] rounded-lg flex items-center justify-center text-white hover:bg-[#408a6d] transition-colors">
                     <SearchIcon className="h-5 w-5" />
                 </button>
             </div>
