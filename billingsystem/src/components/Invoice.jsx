@@ -1,5 +1,7 @@
 import { Document, Page, Text, View, StyleSheet, PDFDownloadLink, pdf } from '@react-pdf/renderer'
 import { useState } from 'react'
+import DownloadIcon from '@mui/icons-material/Download'
+import './Invoice.css'
 
 // Create styles
 const styles = StyleSheet.create({
@@ -216,10 +218,10 @@ const InvoiceDownloadButton = ({ formData }) => {
   return (
     <button 
       onClick={handleDownload}
-      disabled={isGenerating}
-      className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors"
+      className="invoice-button"
     >
-      {isGenerating ? 'Generating PDF...' : 'Download PDF'}
+      <DownloadIcon className="invoice-icon" />
+      <span className="invoice-text">Download PDF</span>
     </button>
   )
 }
